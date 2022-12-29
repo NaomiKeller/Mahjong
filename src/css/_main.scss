@@ -1,0 +1,140 @@
+body {
+	color: black;
+	background: #efefef;
+	font-family: 'Lato', sans-serif;
+	/* for disabling text selection */
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	#title {
+		text-align: center;
+		margin-top: 55px;
+		margin-bottom: 12px;
+		text-transform: uppercase;
+		letter-spacing: 10px;
+		font-size: 40px;
+	}
+	.start-help {
+		padding-bottom: 20px;
+	}
+	#startscreenDiv {
+		width: 347px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		background: rgb(33, 33, 33);
+		color: #efefef;
+		border-radius: 6px;
+		margin-top: 30px;
+		padding: 20px 0 40px;
+		position: relative;
+		z-index: 99;
+		#textContainer {
+			text-align: center;
+			max-width: 150px;
+			display: inline-block;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			#sizeSlider, #difficultySlider {
+				-webkit-appearance: none;
+				background: #efefef;
+				border-radius: 3px;
+				margin-bottom: 20px;
+				margin-top: 12px;
+				&::-webkit-slider-thumb {
+					-webkit-appearance: none;
+					border: 1px solid #000000;
+					height: 26px;
+					width: 16px;
+					border-radius: 3px;
+					background: #efefef;
+					cursor: pointer;
+					margin-top: 0px;
+					box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+					box-sizing: border-box;
+					&:hover {
+						background:rgb(33,33,33);
+						border-color: #efefef;
+					}
+				}
+			}
+		}
+	}
+	#divTable {
+		background: rgb(33, 33, 33);
+		position: fixed;
+		left: 50%;
+		transform: translate(-50%, 0);
+		border-radius: 6px;
+		top: 160px;
+	}
+	table.gameTable {
+		font-weight: bold;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: transparent;
+		border-spacing: 1px;
+		border-radius: 3px;
+		padding: 20px 25px 25px 20px;
+		tr.gameTable {
+			background-color: transparent;
+		}
+		td.gameTable {
+			text-align: center;
+			min-width: 50px;
+			border-radius: 5px;
+		}
+	}
+
+	#container {
+		text-align: center;
+		#bottomBar {
+			display: flex;
+			position: relative;
+			justify-content: space-between;
+			top: 15px;
+			background: #212121;
+			border-radius: 6px;
+			color: #efefef;
+			padding: 11px 24px 19px;
+			span {
+				font-size: 13.5px;
+				margin-right: 5px;
+			}
+			.bar-stats {
+				margin-bottom: 6px;
+				display: inherit;
+				position: relative;
+				top: 6px;
+			}
+		}
+	}
+	#leCreatorName {
+		color: #AAAAAA;
+		font-size: 10pt;
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+	}
+}
+
+.btn, #nGButton input {
+	background: #efefef;
+	color: black;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 16px;
+	border: none; outline: none;
+	border-radius: 3px;
+	padding: 6.5px 20px 5px;
+	cursor: pointer;
+	transition: ease-in-out .3s;
+	&:hover {
+		background: rgb(33, 33, 33);
+		color: #efefef;
+		outline: 1px solid #efefef;
+	}
+}
