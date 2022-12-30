@@ -14,8 +14,9 @@ $(function(){
 		} else {
 			$('.orientation-warning').css('display', 'none');
 		}
-		$( window ).on( "orientationchange", function( event ) {
-			
+	}
+	$( window ).on( "orientationchange", function( event ) {
+		if ( $(window).width() < 768 ) {
 			let orientation = window.orientation; // 90 is landscape, 0 is portrait
 			console.log(orientation);
 			if ( orientation === 0 ) {
@@ -23,6 +24,6 @@ $(function(){
 			} else {
 				$('.orientation-warning').css('display', 'none');
 			}
-		});
-	}
+		}
+	});
 });
