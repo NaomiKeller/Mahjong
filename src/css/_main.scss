@@ -10,11 +10,22 @@ body {
 	-webkit-user-select: none;
 	#title {
 		text-align: center;
-		margin-top: 55px;
 		margin-bottom: 12px;
+		margin-top: 30px;
 		text-transform: uppercase;
 		letter-spacing: 10px;
 		font-size: 40px;
+		writing-mode: vertical-lr;
+		@include abs-vert-center;
+		transform: rotate(180deg);
+		&.right {
+			transform: rotate(0deg);
+			right: 0;
+		}
+		.chinese-title {
+			font-size: 50px;
+			transform: rotate(0deg) !important;
+		}
 	}
 	.start-help {
 		padding-bottom: 20px;
@@ -29,8 +40,9 @@ body {
 		border-radius: 6px;
 		margin-top: 30px;
 		padding: 20px 0 40px;
-		position: relative;
 		z-index: 99;
+		@include abs-center;
+		top: 45%;
 		#textContainer {
 			text-align: center;
 			max-width: 150px;
@@ -55,6 +67,7 @@ body {
 					margin-top: 0px;
 					box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 					box-sizing: border-box;
+					transition: ease-in-out .2s;
 					&:hover {
 						background:rgb(33,33,33);
 						border-color: #efefef;
@@ -65,11 +78,8 @@ body {
 	}
 	#divTable {
 		background: rgb(33, 33, 33);
-		position: fixed;
-		left: 50%;
-		transform: translate(-50%, 0);
 		border-radius: 6px;
-		top: 160px;
+		@include abs-center;
 	}
 	table.gameTable {
 		font-weight: bold;
