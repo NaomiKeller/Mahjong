@@ -25,8 +25,7 @@ body {
       transform: rotate(0deg);
       right: 0; }
     body #title .chinese-title {
-      font-size: 50px;
-      transform: rotate(0deg) !important; }
+      font-size: 50px; }
   body .start-help {
     padding-bottom: 20px; }
   body #startscreenDiv {
