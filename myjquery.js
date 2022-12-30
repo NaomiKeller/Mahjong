@@ -26,4 +26,14 @@ $(function(){
 			}
 		}
 	});
+	$('#close-warning').on('click', () => {
+		$('.orientation-warning').css('display', 'none');
+	});
+	$('.start-btn').on('click', () => {
+		let width = $('#divTable').width();
+		if ( width > 681 ) {
+			$('.orientation-warning').css('font-size', '120%');
+			$('.orientation-warning').find('span').css('font-size', '120%');
+		}
+	});
 });

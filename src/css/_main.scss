@@ -25,20 +25,32 @@ body {
 			font-size: 50px;
 		}
 		@media (max-width: 400px) {
-			top: 10%;
+			top: 4%;
 		}
 	}
-	h4 {
+	.orientation-warning {
 		display: none;
 		background:rgb(169, 27, 27);
 		text-align: center;
 		margin: 0 auto;
 		max-width: fit-content;
-		padding: 30px 15px;
+		padding: 30px 15px 8px;
 		color: white;
-		font-size: 22px;
+		font-size: 18px;
 		position: fixed;
 		bottom: 0;
+		z-index: 100;
+		box-shadow: 0px -10px 15px rgba(0, 0, 0, 0.375);
+		h4 {
+			padding-top: 3px;
+		}
+		span {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 10px 15px;
+			font-size: 27px;
+		}
 	}
 	.start-help {
 		padding-bottom: 20px;
