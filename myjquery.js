@@ -3,24 +3,26 @@ $(function(){
 	$('#divTable').css('opacity', 0);
 	// Show game table and hide title
 	$('.start-btn').on('click', () => {
-		console.log($('#title'))
 		$('#title').css('opacity', 0);
 		$('#divTable').css('opacity', 1);
 	});
-	$(window).resize( () => {
-		let width = $(window).width();
-		let triggerWidth = 790;
-		console.log(width);
-		if (width <= triggerWidth) {
-			alert('If on mobile device, it is recommended to play horizontally.');
+	// Notify user if not in correct orientation
+	if ( $(window).width() < 768 ) {
+		let orientation = window.orientation; // 90 is landscape, 0 is portrait
+		if ( orientation === 0 ) {
+			$('.orientation-warning').css('display', 'block');
+		} else {
+			$('.orientation-warning').css('display', 'none');
 		}
-	});
+		$( window ).on( "orientationchange", function( event ) {
+			
+			let orientation = window.orientation; // 90 is landscape, 0 is portrait
+			console.log(orientation);
+			if ( orientation === 0 ) {
+				$('.orientation-warning').css('display', 'block');
+			} else {
+				$('.orientation-warning').css('display', 'none');
+			}
+		});
+	}
 });
-
-screen.orientation.lock("landscape")
-	.then(function() {
-		alert('Locked');
-	})
-	.catch(function(error) {
-		alert(error);
-	});

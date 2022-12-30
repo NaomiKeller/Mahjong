@@ -23,6 +23,17 @@ body {
 			font-size: 50px;
 		}
 	}
+	h4 {
+		display: none;
+		background:rgb(169, 27, 27);
+		border-radius: 5px;
+		text-align: center;
+		margin: 0 auto;
+		max-width: fit-content;
+		padding: 15px;
+		color: white;
+		font-size: 15px;
+	}
 	.start-help {
 		padding-bottom: 20px;
 	}
