@@ -1,7 +1,7 @@
 body {
 	color: black;
 	background: #efefef;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Lato', sans-serif !important;
 	margin: 0 auto;
 	min-width: fit-content;
 	/* for disabling text selection */
@@ -102,6 +102,7 @@ body {
 	#divTable {
 		background: rgb(33, 33, 33);
 		border-radius: 6px;
+		box-shadow: 10px 10px 20px rgba(0,0,0,.2);
 		@media (min-height: 690px) {
 			@include abs-center;
 		}
