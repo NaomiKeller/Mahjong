@@ -249,8 +249,8 @@ body {
   animation: CELL-MOVE-IN 0.3s ease-out 0s 1 normal; }
 
 td {
-  background: linear-gradient(white, #ededed);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(white, #fefefe);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   position: relative;
   font-size: 1px;
   color: transparent; }
@@ -262,10 +262,9 @@ td {
     min-height: -webkit-fill-available;
     min-width: -webkit-fill-available;
     border-radius: 5px;
-    border-bottom-left-radius: 8px;
-    border-top-right-radius: 8px;
-    right: -4px;
-    bottom: -4px;
+    border-bottom-left-radius: 7px;
+    right: -2px;
+    bottom: -7px;
     z-index: -1; }
   td.non-removable {
     opacity: .2; }
