@@ -599,8 +599,8 @@ const startGame = () => {
   const size = document.getElementById('sizeSlider').value;
 
   // Subtract from 4, so 3 is hardest, 1 is easiest (the opposite of the slider's value)
-  const difficulty = 4 - document.getElementById('difficultySlider').value;
-
+  // const difficulty = 4 - document.getElementById('difficultySlider').value;
+  const difficulty = 2;
   // Remove settings
   const div = document.getElementById('startscreenDiv');
   div.parentNode.removeChild(div);
