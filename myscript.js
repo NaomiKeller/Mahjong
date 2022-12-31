@@ -559,8 +559,21 @@ const timer = () => {
 /**
  * Start counting down until game over
  */
-const initTimer = () => {
-  totalTime = 900;          // 300 seconds = 5 minutes
+const initTimer = (size) => {
+  switch(size) {
+    case size = '2':
+      totalTime = 170;
+      break;
+    case size = '3':
+      totalTime = 250;
+      break;
+    case size = '4':
+      totalTime = 320;
+      break; 
+    default:
+      totalTime = 250;
+  }
+
   count = totalTime;
   counter = setInterval(timer, 1000);
 
@@ -571,9 +584,9 @@ const initTimer = () => {
  * Call the functions that add things to the bottom bar
  * (below the mahjong board)
  */
-const addThingsToBottomBar = () => {
+const addThingsToBottomBar = (size) => {
   createNewGameButton();
-  initTimer();
+  initTimer(size);
   initMoveCounters();
   document.getElementById('bottomBar').className = 'bottomBar-animation';
 };
@@ -586,7 +599,7 @@ const startGame = () => {
   const size = document.getElementById('sizeSlider').value;
 
   // Subtract from 4, so 3 is hardest, 1 is easiest (the opposite of the slider's value)
-  const difficulty = 4 - 2;
+  const difficulty = 4 - document.getElementById('difficultySlider').value;
 
   // Remove settings
   const div = document.getElementById('startscreenDiv');
@@ -626,6 +639,6 @@ const startGame = () => {
   animateTable(cells.length - 1);
 
   // Add the new game button and other things to the bottom bar
-  addThingsToBottomBar();
+  addThingsToBottomBar(size);
 };
 

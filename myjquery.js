@@ -18,7 +18,6 @@ $(function(){
 	$( window ).on( "orientationchange", function( event ) {
 		if ( $(window).width() < 768 ) {
 			let orientation = window.orientation; // 90 is landscape, 0 is portrait
-			console.log(orientation);
 			if ( orientation === 0 ) {
 				$('.orientation-warning').css('display', 'block');
 			} else {
