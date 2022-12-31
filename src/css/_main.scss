@@ -194,3 +194,16 @@ body {
 		outline: 1px solid #efefef;
 	}
 }
+
+.pause-btn {
+	display: none;
+	position: absolute;
+    max-width: 40px;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 13px 13px;
+	cursor: pointer;
+	&:hover {
+		filter: invert(71%) sepia(42%) saturate(0%) hue-rotate(224deg) brightness(95%) contrast(113%);
+	}
+}
