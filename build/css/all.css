@@ -122,25 +122,22 @@ body {
     opacity: 0;
     visibility: hidden; }
   body .div-help {
+    position: sticky;
     width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 40px auto 40px;
     text-align: center;
     background: #212121;
     color: #efefef;
     border-radius: 6px;
     padding: 20px 0 40px;
     z-index: 100;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 580px;
-    left: 50%;
-    transform: translate(-50%, -50%);
     transition: ease-in-out .3s;
     opacity: 0;
     visibility: hidden; }
+    @media (max-width: 760px) {
+      body .div-help {
+        margin: 40px auto 0;
+        border-radius: 0; } }
     body .div-help h3 {
       padding-bottom: 20px; }
     body .div-help p {
@@ -168,10 +165,6 @@ body {
       body .div-help .help-exit:hover {
         background: #efefef;
         color: #212121; }
-  body .div-help-spacer {
-    height: 85px;
-    margin: 0 0 -85px 0;
-    background: transparent; }
   body #divTable {
     background: #212121;
     border-radius: 6px;
